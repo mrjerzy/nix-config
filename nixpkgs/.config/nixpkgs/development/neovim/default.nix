@@ -7,6 +7,7 @@
       EDITOR = "nvim";
     };
 
+
     fonts.fontconfig.enable = true;
     home.packages = with pkgs; [
       inconsolata-nerdfont
@@ -43,7 +44,7 @@
         noremap <leader>q :q<cr>
         " Reload vim Configuration
         noremap <leader>r :source $HOME/.config/nvim/init.vim<cr>
-        noremap <leader><esc> :split<cr><c-w><down>:e $HOME/.config/nixpkgs/home.nix<cr>
+        noremap <leader><esc> :tabnew<cr>:e $HOME/.config/nixpkgs/home.nix<cr>
         " split windows
         noremap <leader>z :split<cr>
         noremap <leader>x :vsplit<cr>
@@ -60,7 +61,7 @@
         " Generate home-manager config 
         nnoremap <leader>` :!home-manager switch<cr>
         " Open Terminal
-        nnoremap <leader>t :vsplit<cr>:term<cr>
+        nnoremap <leader>t :tabnew<cr>:term<cr>
         " Tabs
         nnoremap <leader><leader> :tabprevious<cr>
         nnoremap <leader>. :tabnext<cr>
@@ -69,6 +70,7 @@
       plugins = with pkgs.vimPlugins; [ 
         vim-nix
         vim-go
+        markdown-preview-nvim
         # Nerdtree
         {
           plugin = nerdtree;

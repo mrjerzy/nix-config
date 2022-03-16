@@ -19,12 +19,22 @@
   # Environment Variables
   home.sessionVariables = { 
     K9S_EDITOR = "$HOME/.nix-profile/bin/vim";
+    NIX_PATH = "$HOME/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels";
+  };
+
+  programs.zsh.shellAliases = {
+    r = "ranger";
+    ls = "exa";
+    la = "exa -la";
+    l = "exa -l";
+    "," = "nix-shell -p";
   };
 
   # PATH variables
   home.sessionPath = [ 
     "$HOME/go/bin"  
   ];
+
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -39,5 +49,7 @@
     pkgs.yq
     pkgs.nix-prefetch-git
     pkgs.ranger
+    pkgs.exa
+    pkgs.fzf
   ];
 }

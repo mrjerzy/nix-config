@@ -2,11 +2,11 @@
 
 { 
   imports = [
-    ./zsh
-    ./neovim
-    ./fish
-    ./k8s
-    ./go
     ./alacritty
+    ./fish
+    ./go
+    ./k8s
+    ./neovim
+    ./zsh
   ];
 }
