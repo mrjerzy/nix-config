@@ -12,6 +12,17 @@
           startup_mode = "Maximized";
         };
 
+        # Add support for tabs
+        # need to set "Prefer Tabs" in OSX general settings
+        decorations = "full";
+        key_bindings = [
+          {
+            key = "T";
+            mods = "Command";
+            action = "CreateNewWindow";
+          }
+        ];
+
         # https://github.com/mbadolato/iTerm2-Color-Schemes
         # Colors (Tinacious Design (Dark)) 
         colors = {
