@@ -70,7 +70,13 @@
       plugins = with pkgs.vimPlugins; [ 
         vim-nix
         vim-go
-        markdown-preview-nvim
+        { 
+          plugin = markdown-preview-nvim;
+          config = ''
+            let g:mkdp_auto_start = 1
+          '';
+
+        }
         # Nerdtree
         {
           plugin = nerdtree;
