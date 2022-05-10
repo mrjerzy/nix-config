@@ -17,6 +17,16 @@
         decorations = "full";
         key_bindings = [
           {
+            key = "C";
+            mods = "Command";
+            action = "Copy";
+          }
+          {
+            key = "P";
+            mods = "Command";
+            action = "Paste";
+          }
+          {
             key = "T";
             mods = "Command";
             action = "CreateNewWindow";

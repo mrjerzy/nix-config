@@ -1,6 +1,6 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"" General 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" General
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set number
 set tabstop=2
 set shiftwidth=2
@@ -11,12 +11,18 @@ set history=500                         " number of undos
 set clipboard=unnamedplus               " use the system clipboard
 set showmatch                           " Show matching brackets
 set noswapfile                          " do not create swap files
+set cmdheight=2                         " make command line 2 lines heigh
+set nobackup
+set nowritebackup
+set termguicolors                       " applies terminal colors to vim
 set relativenumber                      " show relative numbering of lines
 set mouse=a                             " enable mouse support in all modes
 set cursorline                          " show an underline, where the cursor is
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set list                                " Shows trailing whitespaces
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Key Mappings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " toggle show numbers
 nnoremap <f2> :set number!<cr>:set relativenumber!<cr>
 " saving files
@@ -38,7 +44,7 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-" Generate home-manager config 
+" Generate home-manager config
 nnoremap <leader>` :!home-manager switch<cr>
 " Open Terminal
 nnoremap <leader>t :tabnew<cr>:term<cr>

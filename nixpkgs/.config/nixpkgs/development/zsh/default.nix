@@ -27,7 +27,8 @@
             rev = "0.4.3";
             sha256 = "0fq1zlnsj1bb7byli7mwlz7nm2yszwmyx43ccczcv51mjjfivyp3";
           };
-        }      ];
+        }     
+      ];
       autocd = true;
       enableAutosuggestions = true;
       oh-my-zsh = { 

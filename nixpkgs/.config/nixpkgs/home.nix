@@ -1,9 +1,10 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports = [
     ./development
   ];
+
 
   # man home-configuration.nix
   manual.manpages.enable = true;
@@ -20,7 +21,17 @@
   home.sessionVariables = { 
     K9S_EDITOR = "$HOME/.nix-profile/bin/vim";
     NIX_PATH = "$HOME/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels";
+    CFG = "$HOME/.config/nixpkgs";
+    CODE = "$HOME/Documents/code";
   };
+
+  # Install Flake Support 
+  lib.nix = {
+    package = pkgs.nixFlakes; 
+    extraOptions = ''
+      experimental-features = nix-command flakes
+    '';
+   };
 
   programs.zsh.shellAliases = {
     r = "ranger";
@@ -28,11 +39,16 @@
     la = "exa -la";
     l = "exa -l";
     "," = "nix-shell -p";
+    bc = "bc -l";
+    cfg = "cd ~/.config/nixpkgs && vim home.nix";
+    ta = "tmux attach";
+    du = "dust";
+    ga = "git add";
+    gs = "git status";
   };
 
   # PATH variables
   home.sessionPath = [ 
-    "$HOME/go/bin"  
   ];
 
 
@@ -42,7 +58,6 @@
   home.packages = [
     pkgs.htop
     pkgs.git
-    pkgs.go
     pkgs.jq
     pkgs.stow
     pkgs.wget
@@ -51,5 +66,7 @@
     pkgs.ranger
     pkgs.exa
     pkgs.fzf
+    pkgs.iterm2
+    pkgs.du-dust
   ];
 }
