@@ -6,6 +6,7 @@
       podman
       just
       hugo
+      vscode
     ];
   };
 

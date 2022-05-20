@@ -5,6 +5,8 @@
     ./development
   ];
 
+  # allow unfree packages
+  nixpkgs.config.allowUnfree = true;
 
   # man home-configuration.nix
   manual.manpages.enable = true;
@@ -43,9 +45,15 @@
     cfg = "cd ~/.config/nixpkgs && vim home.nix";
     ta = "tmux attach";
     du = "dust";
+    df = "duf";
     ga = "git add";
     gs = "git status";
   };
+
+  programs.zsh.initExtra = ''
+    eval "$(mcfly init zsh)"
+  '';
+
 
   # PATH variables
   home.sessionPath = [ 
@@ -68,5 +76,7 @@
     pkgs.fzf
     pkgs.iterm2
     pkgs.du-dust
+    pkgs.duf
+    pkgs.mcfly
   ];
 }
