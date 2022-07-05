@@ -57,6 +57,7 @@
 
   # PATH variables
   home.sessionPath = [ 
+    "/Users/jerzy/.platformio/penv/bin"
   ];
 
 

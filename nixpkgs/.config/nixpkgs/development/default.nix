@@ -7,6 +7,7 @@
       just
       hugo
       vscode
+      python38
     ];
   };
 
