@@ -44,7 +44,7 @@
     l = "exa -l";
     "," = "nix shell nixpkgs#";
     bc = "bc -l";
-    cfg = "cd ~/.config/nixpkgs && vim home.nix";
+    cfg = "cd ~/dotfiles/ && vim home.nix";
     ta = "tmux attach";
     du = "dust";
     df = "duf";
