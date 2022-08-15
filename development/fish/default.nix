@@ -1,14 +1,14 @@
-{ config, lib, pkgs, ...}: 
+{ config, lib, pkgs, ...}:
 
-{ 
-  config = { 
+{
+  config = {
     home.packages = with pkgs; [
       pkgs.oh-my-fish
     ];
 
-    programs.fish = { 
+    programs.fish = {
       enable = true;
-      shellAbbrs = { 
+      shellAbbrs = {
         g = "git";
         hm = "home-manager switch";
       };
@@ -33,6 +33,5 @@
          }
       ];
     };
-  }; 
+  };
 }
-

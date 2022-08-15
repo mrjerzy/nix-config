@@ -1,7 +1,7 @@
-{ config, lib, pkgs, ...}: 
+{ config, lib, pkgs, ...}:
 
-{ 
-  config = { 
+{
+  config = {
     home.packages = with pkgs; [
       pkgs.go
       pkgs.gocode
@@ -9,9 +9,8 @@
     ];
 
     # PATH variables
-    home.sessionPath = [ 
-      "$HOME/go/bin"  
+    home.sessionPath = [
+      "$HOME/go/bin"
     ];
   };
 }
-

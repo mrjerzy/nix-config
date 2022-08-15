@@ -52,4 +52,3 @@ nnoremap <leader>t :tabnew<cr>:term<cr>
 nnoremap <leader><leader> :tabprevious<cr>
 nnoremap <leader>. :tabnext<cr>
 nnoremap <leader>m :tabnew<cr>
-

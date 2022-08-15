@@ -1,9 +1,9 @@
-{ config, lib, pkgs, ...}: 
+{ config, lib, pkgs, ...}:
 
-{ 
-  config = { 
+{
+  config = {
 
-    # packages 
+    # packages
     home.packages = with pkgs; [
       pkgs.maven
       pkgs.jdk
@@ -16,8 +16,7 @@
     };
 
     # PATH variables
-    home.sessionPath = [ 
+    home.sessionPath = [
     ];
   };
 }
-

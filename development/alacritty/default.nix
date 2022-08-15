@@ -7,7 +7,7 @@
         font = {
           size = 17;
         };
-        window = { 
+        window = {
           opacity = 0.95;
           startup_mode = "Maximized";
         };
@@ -34,7 +34,7 @@
         ];
 
         # https://github.com/mbadolato/iTerm2-Color-Schemes
-        # Colors (Tinacious Design (Dark)) 
+        # Colors (Tinacious Design (Dark))
         colors = {
           bright = {
             black = "#636667";
@@ -50,7 +50,7 @@
             cursor = "#cbcbf0";
             text = "#ffffff";
           };
-          normal = { 
+          normal = {
             black = "#1d1d26";
             blue = "#00cbff";
             cyan = "#00ceca";

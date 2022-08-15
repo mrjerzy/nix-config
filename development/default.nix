@@ -1,7 +1,7 @@
 { config, lib, pkgs, ...}:
 
-{ 
-  config = { 
+{
+  config = {
     home.packages = with pkgs; [
       vscode
       python38

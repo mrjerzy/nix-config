@@ -7,9 +7,9 @@
       pkgs.pure-prompt
     ];
 
-    programs.zsh = { 
+    programs.zsh = {
       enable = true;
-      plugins = [ 
+      plugins = [
         {
           name = "zsh-vi-mode";
           src = pkgs.fetchFromGitHub {
@@ -27,11 +27,11 @@
             rev = "0.4.3";
             sha256 = "0fq1zlnsj1bb7byli7mwlz7nm2yszwmyx43ccczcv51mjjfivyp3";
           };
-        }     
+        }
       ];
       autocd = true;
       enableAutosuggestions = true;
-      oh-my-zsh = { 
+      oh-my-zsh = {
         enable = true;
         # can i improve that? https://github.com/nix-community/home-manager/issues/1224
         theme = "robbyrussell";

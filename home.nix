@@ -15,23 +15,23 @@
   manual.manpages.enable = true;
   manual.html.enable = true;
 
-  # home. documentation: 
+  # home. documentation:
   # https://github.com/nix-community/home-manager/blob/master/modules/home-environment.nix
   home.username = "jerzy";
   home.homeDirectory = "/Users/jerzy";
   home.stateVersion = "22.05";
 
   # Environment Variables
-  home.sessionVariables = { 
+  home.sessionVariables = {
     K9S_EDITOR = "$HOME/.nix-profile/bin/vim";
     NIX_PATH = "$HOME/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels";
     CFG = "$HOME/dotfiles";
     CODE = "$HOME/Documents/code";
   };
 
-  # Install Flake Support 
+  # Install Flake Support
   lib.nix = {
-    package = pkgs.nixFlakes; 
+    package = pkgs.nixFlakes;
     extraOptions = ''
       experimental-features = nix-command flakes
     '';
@@ -59,7 +59,7 @@
   '';
 
   # PATH variables
-  home.sessionPath = [ 
+  home.sessionPath = [
     "$HOME/.platformio/penv/bin"
   ];
 

@@ -8,13 +8,13 @@ cmp.setup({
       require("luasnip").lsp_expand(args.body)
     end,
   },
-  view = { 
+  view = {
     entries = "native"
   },
   formatting = {
     format = lspkind.cmp_format({
-      mode = 'symbol_text', 
-      menu = ({ 
+      mode = 'symbol_text',
+      menu = ({
         Ouffer = "[buf]",
         nvim_lsp = "[lsp]",
         path = "[path]",
@@ -55,4 +55,3 @@ vim.cmd[[
 ]]
 
 EOF
-
