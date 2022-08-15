@@ -1,12 +1,15 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, fetchFromGitHub, buildGoModule, ... }:
 
 {
   imports = [
     ./development
   ];
 
-  # allow unfree packages
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowBroken = true;
+
+  # Let home-manager install and manage itself.
+  programs.home-manager.enable = true;
 
   # man home-configuration.nix
   manual.manpages.enable = true;
@@ -17,7 +20,6 @@
   home.username = "jerzy";
   home.homeDirectory = "/Users/jerzy";
   home.stateVersion = "22.05";
-
 
   # Environment Variables
   home.sessionVariables = { 
@@ -40,7 +42,7 @@
     ls = "exa";
     la = "exa -la";
     l = "exa -l";
-    "," = "nix-shell -p";
+    "," = "nix shell nixpkgs#";
     bc = "bc -l";
     cfg = "cd ~/.config/nixpkgs && vim home.nix";
     ta = "tmux attach";
@@ -50,34 +52,29 @@
     gs = "git status";
   };
 
+  # Add statements to .zshrc
   programs.zsh.initExtra = ''
-    eval "$(mcfly init zsh)"
+    # some command
   '';
-
 
   # PATH variables
   home.sessionPath = [ 
     "$HOME/.platformio/penv/bin"
   ];
 
-
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
-
-  home.packages = [
-    pkgs.htop
-    pkgs.git
-    pkgs.jq
-    pkgs.stow
-    pkgs.wget
-    pkgs.yq
-    pkgs.nix-prefetch-git
-    pkgs.ranger
-    pkgs.exa
-    pkgs.fzf
-    pkgs.iterm2
-    pkgs.du-dust
-    pkgs.duf
-    pkgs.mcfly
+  home.packages = with pkgs; [
+    htop
+    git
+    jq
+    stow
+    wget
+    yq
+    nix-prefetch-git
+    ranger
+    exa
+    fzf
+    iterm2
+    du-dust
+    duf
   ];
 }
