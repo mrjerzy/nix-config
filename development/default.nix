@@ -3,7 +3,7 @@
 { 
   config = { 
     home.packages = with pkgs; [
-      # vscode
+      vscode
       python38
       pre-commit
     ];

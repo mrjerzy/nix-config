@@ -111,7 +111,6 @@
                 "lua",
                 "make",
                 "markdown",
-                "nix",
                 "toml",
                 "typescript",
                 "vim",

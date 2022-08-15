@@ -25,7 +25,7 @@
   home.sessionVariables = { 
     K9S_EDITOR = "$HOME/.nix-profile/bin/vim";
     NIX_PATH = "$HOME/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels";
-    CFG = "$HOME/.config/nixpkgs";
+    CFG = "$HOME/dotfiles";
     CODE = "$HOME/Documents/code";
   };
 
