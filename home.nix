@@ -50,6 +50,7 @@
     df = "duf";
     ga = "git add";
     gs = "git status";
+    vim = "nvim";
   };
 
   # Add statements to .zshrc
