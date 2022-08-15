@@ -18,7 +18,6 @@
             set -g @tilish-navigate 'on'
             set -g @tilish-default 'main-vertical'
             set -g @tilish-shiftnum '!@#$%^&*()'
-            set -g @tilish-easymode 'on'
             set -g mouse on
           '';
         }
