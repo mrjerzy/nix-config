@@ -1,4 +1,4 @@
-{ config, pkgs, lib, fetchFromGitHub, buildGoModule, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports = [
@@ -6,7 +6,6 @@
   ];
 
   nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.allowBroken = true;
 
   # Let home-manager install and manage itself.
   programs.home-manager.enable = true;
@@ -15,18 +14,10 @@
   manual.manpages.enable = true;
   manual.html.enable = true;
 
-  # home. documentation:
-  # https://github.com/nix-community/home-manager/blob/master/modules/home-environment.nix
-  home.username = "jerzy";
-  home.homeDirectory = "/Users/jerzy";
-  home.stateVersion = "22.05";
-
   # Environment Variables
   home.sessionVariables = {
     K9S_EDITOR = "$HOME/.nix-profile/bin/vim";
     NIX_PATH = "$HOME/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels";
-    CFG = "$HOME/dotfiles";
-    CODE = "$HOME/Documents/code";
   };
 
   # Install Flake Support
@@ -44,7 +35,7 @@
     l = "exa -l";
     "," = "nix shell nixpkgs#";
     bc = "bc -l";
-    cfg = "cd ~/dotfiles/ && vim home.nix";
+    cfg = "cd $CFG && vim home.nix";
     ta = "tmux attach";
     du = "dust";
     df = "duf";
