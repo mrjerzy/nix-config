@@ -10,7 +10,6 @@
    # Environment Variables
   home.sessionVariables = {
     CODE = "$HOME/code";
-    CFG = "$HOME/code/config";
   };
 
   # Path variables
