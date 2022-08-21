@@ -30,7 +30,7 @@ noremap <leader>w :w!<cr>
 noremap <leader>q :q<cr>
 " Reload vim Configuration
 noremap <leader>r :source $HOME/.config/nvim/init.vim<cr>
-noremap <leader><esc> :tabnew<cr>:e $HOME/.config/nixpkgs/home.nix<cr>
+noremap <leader><esc> :tabnew<cr>:e $CFG/home.nix<cr>
 " split windows
 noremap <leader>z :split<cr>
 noremap <leader>x :vsplit<cr>
@@ -45,7 +45,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 " Generate home-manager config
-nnoremap <leader>` :!home-manager switch<cr>
+nnoremap <leader>` :!home-manager switch --flake $NIX_MACHINE_CFG<cr>
 " Open Terminal
 nnoremap <leader>t :tabnew<cr>:term<cr>
 " Tabs

@@ -19,6 +19,7 @@
     K9S_EDITOR = "$HOME/.nix-profile/bin/vim";
     NIX_PATH = "$HOME/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels";
     CFG = "$HOME/nix-config/";
+    NIX_MACHINE_CFG = "$CFG#$NIX_MACHINE";
   };
 
   # Install Flake Support
@@ -43,11 +44,14 @@
     ga = "git add";
     gs = "git status";
     vim = "nvim";
+    cb = "nvim $HOME/.bookmarks";
   };
 
   # Add statements to .zshrc
   programs.zsh.initExtra = ''
-    # some command
+    # bookmarks
+    c() { cd `bookmarks get $1` }
+    a() { cd `bookmarks add $1 $2` }
   '';
 
   # PATH variables

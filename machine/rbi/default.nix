@@ -10,6 +10,7 @@
    # Environment Variables
   home.sessionVariables = {
     CODE = "$HOME/code";
+    NIX_MACHINE = "rbi";
   };
 
   # Path variables

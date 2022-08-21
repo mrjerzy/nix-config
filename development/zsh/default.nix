@@ -29,6 +29,10 @@
           };
         }
       ];
+      cdpath = [
+        "$HOME/go/src/github.com/mrjerz/"
+        "$HOME/code/"
+      ];
       autocd = true;
       enableAutosuggestions = true;
       oh-my-zsh = {
