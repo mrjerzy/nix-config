@@ -14,6 +14,7 @@
     ./go
     ./k8s
     ./neovim
+    ./helix
     ./zsh
     ./tmux
     ./java
