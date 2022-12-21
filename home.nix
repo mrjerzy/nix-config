@@ -36,7 +36,7 @@
     l = "exa -l";
     "," = "nix shell nixpkgs#";
     bc = "bc -l";
-    cfg = "cd $CFG && vim home.nix";
+    cfg = "cd $CFG && hx home.nix";
     ta = "tmux attach";
     du = "dust";
     df = "duf";
