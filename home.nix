@@ -55,6 +55,9 @@
   # PATH variables
   home.sessionPath = [
     "$HOME/.platformio/penv/bin"
+    # required, as nix-profile disapears from PATH. Not sure
+    # what causes it.
+    "$HOME/.nix-profile/bin"
   ];
 
   home.packages = with pkgs; [
