@@ -44,6 +44,11 @@
     gs = "git status";
     vim = "nvim";
     cb = "nvim $HOME/.bookmarks";
+
+    # bookmarks
+    s = "bookmarks add";
+    u = "bookmarks update";
+    r = "bookmarks remove";
   };
 
   # Add statements to .zshrc
