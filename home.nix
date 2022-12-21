@@ -31,7 +31,6 @@
    };
 
   programs.zsh.shellAliases = {
-    r = "ranger";
     ls = "exa";
     la = "exa -la";
     l = "exa -l";
@@ -51,7 +50,6 @@
   programs.zsh.initExtra = ''
     # bookmarks
     c() { cd `bookmarks get $1` }
-    a() { cd `bookmarks add $1 $2` }
   '';
 
   # PATH variables
@@ -67,11 +65,11 @@
     wget
     yq
     nix-prefetch-git
-    ranger
     exa
     fzf
     iterm2
     du-dust
     duf
+    nix
   ];
 }
