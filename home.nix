@@ -47,7 +47,7 @@
     cb = "nvim $HOME/.bookmarks";
 
     # bookmarks
-    s = "bookmarks add";
+    a = "bookmarks add";
     u = "bookmarks update";
     r = "bookmarks remove";
   };
