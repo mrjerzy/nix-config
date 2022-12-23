@@ -80,5 +80,6 @@
     du-dust
     duf
     nix
+    tree
   ];
 }
