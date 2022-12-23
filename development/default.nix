@@ -12,6 +12,7 @@
 
   imports = [
     ./go
+    ./rust
     ./k8s
     ./neovim
     ./helix
