@@ -6,6 +6,7 @@
       pkgs.k9s
       pkgs.kubectl
       pkgs.minikube
+      pkgs.kustomize
     ];
 
     home.sessionVariables = {
