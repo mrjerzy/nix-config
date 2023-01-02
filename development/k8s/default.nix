@@ -10,7 +10,6 @@
     ];
 
     home.sessionVariables = {
-      K9S_EDITOR = "$HOME/.nix-profile/bin/vim";
     };
   };
 }
