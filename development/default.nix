@@ -6,6 +6,7 @@
       vscode
       python38
       pre-commit
+      postman
     ];
   };
 
