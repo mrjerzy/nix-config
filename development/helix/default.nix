@@ -31,7 +31,7 @@
           "`" = "keep_primary_selection";
 
           # Update configuration with home-manager
-          ","."`" = ":run-shell-command home-manager switch --flake $NIX_MACHINE_CFG";
+          ","."`" = ":run-shell-command home-manager switch --flake $NIX_MACHINE_CFG --extra-experimental-features nix-command --extra-experimental-features flakes";
         };
       };
     };
