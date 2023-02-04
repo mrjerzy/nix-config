@@ -32,9 +32,9 @@
       ];
       plugins = with pkgs.vimPlugins; [
         {
-          plugin = molokai;
+          plugin = dracula-nvim;
           config = ''
-            colorscheme molokai
+            colorscheme dracula
           '';
         }
         papercolor-theme      # theme
@@ -97,58 +97,19 @@
           '';
         }
         {
-          plugin = nvim-treesitter;
-          config = ''
-            lua <<EOF
-            require('nvim-treesitter.configs').setup {
-              ensure_installed = {
-                "bash",
-                "go",
-                "gomod",
-                "gowork",
-                "json",
-                "lua",
-                "make",
-                "markdown",
-                "toml",
-                "typescript",
-                "vim",
-                "yaml",
-              },
-              highlight = {
-                  enable = true,
-              }
-            }
-            EOF
-            '';
-        }
-        {
           plugin = pkgs.vimUtils.buildVimPluginFrom2Nix {
             pname = "nvim-scrollbar";
             version = "2022-02-26";
             src = pkgs.fetchFromGitHub {
               owner = "petertriho";
               repo = "nvim-scrollbar";
-              rev = "b10ece8f991e2c096bc2a6a92da2a635f9298d26";
+              rev = "6a2065fbcd032075a06d2ab54508b69842bc4496";
               sha256 = "0IwTzVgYi2Z7M2+vJuP+lrKVrTOBWdrIi3mtsj0E+wg=";
             };
           };
           config = ''
             lua require("scrollbar").setup()
           '';
-        }
-        # LSP & Autocompletition
-        nvim-lspconfig
-        lspkind-nvim
-        cmp-buffer
-        cmp-path
-        cmp-cmdline
-        luasnip
-        cmp_luasnip
-        cmp-nvim-lsp
-        {
-          plugin = nvim-cmp;
-          config = builtins.readFile ./completition.lua;
         }
        ];
     };
