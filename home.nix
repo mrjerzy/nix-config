@@ -81,5 +81,6 @@
     duf
     nix
     tree
+    ansible
   ];
 }
