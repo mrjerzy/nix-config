@@ -23,6 +23,7 @@
       ke = "kubectl explain";
       ker = "kubectl explain --recursive";
       ka = "kubectl apply -f";
+      kn = "f() { [ \"$1\" ] && kubectl config set-context --current --namespace $1 || kubectl config view --minify | grep namespace | cut -d\" \" -f6 ; } ; f";
     };
 
     home.sessionVariables = {
