@@ -53,6 +53,9 @@
           '';
         }
         {
+          plugin = vim-terraform; 
+        }
+        {
           plugin = pkgs.vimUtils.buildVimPlugin {
             pname = "md-img-paste";
             version = "2022-03-17";
