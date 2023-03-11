@@ -16,8 +16,8 @@
 
   # Environment Variables
   home.sessionVariables = {
-    K9S_EDITOR = "$HOME/.nix-profile/bin/hx";
-    EDITOR = "$HOME/.nix-profile/bin/hx";
+    K9S_EDITOR = "$HOME/.nix-profile/bin/nvim";
+    EDITOR = "$HOME/.nix-profile/bin/nvim";
     NIX_PATH = "$HOME/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels";
     CFG = "$HOME/nix-config/";
     NIX_MACHINE_CFG = "$CFG#$NIX_MACHINE";
@@ -37,7 +37,7 @@
     l = "exa -l";
     "," = "nix shell nixpkgs#";
     bc = "bc -l";
-    cfg = "cd $CFG && hx home.nix";
+    cfg = "cd $CFG && nvim home.nix";
     ta = "tmux attach";
     du = "dust";
     df = "duf";
