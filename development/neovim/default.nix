@@ -46,14 +46,12 @@
         vim-css-color
         clever-f-vim
         editorconfig-nvim
+        vim-terraform
         {
           plugin = markdown-preview-nvim;
           config = ''
             let g:mkdp_auto_start = 1
           '';
-        }
-        {
-          plugin = vim-terraform; 
         }
         {
           plugin = pkgs.vimUtils.buildVimPlugin {
