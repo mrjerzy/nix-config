@@ -7,6 +7,7 @@
       python38
       pre-commit
       postman
+      nodejs
     ];
   };
 
