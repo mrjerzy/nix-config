@@ -11,6 +11,7 @@
       pkgs.argocd
       pkgs.kubernetes-helm
       pkgs.kubeseal
+      pkgs.cilium-cli
       unixtools.watch
     ];
 
