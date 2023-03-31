@@ -17,10 +17,6 @@
 
     programs.zsh.shellAliases = {
       k = "kubectl";
-      kgd = "kubectl get deploy";
-      kgp = "kubectl get pod";
-      kg = "kubectl get";
-      kd = "kubectl describe";
       ke = "kubectl explain";
       ker = "kubectl explain --recursive";
       ka = "kubectl apply -f";
