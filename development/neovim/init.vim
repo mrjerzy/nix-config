@@ -18,7 +18,8 @@ set termguicolors                       " applies terminal colors to vim
 set relativenumber                      " show relative numbering of lines
 set mouse=a                             " enable mouse support in all modes
 set cursorline                          " show an underline, where the cursor is
-set list                                " Shows trailing whitespaces
+set list                                " shows trailing whitespaces
+set showtabline=2                       " show tabline, even only one is open
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Key Mappings

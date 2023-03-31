@@ -37,13 +37,17 @@
             colorscheme dracula
           '';
         }
-        papercolor-theme      # theme
+        # papercolor-theme      # theme
+        # rainbow
+        supertab
         rainbow
         vim-nix
         vim-go
         vim-airline
         vim-cursorword
         vim-css-color
+        vim-gitgutter
+        vim-fugitive
         clever-f-vim
         editorconfig-nvim
         vim-terraform
