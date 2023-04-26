@@ -9,6 +9,11 @@
       postman
       nodejs
       terraform
+
+      # LSPs
+      rnix-lsp
+      statix
+      vale
     ];
   };
 
