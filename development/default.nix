@@ -28,6 +28,7 @@
     ./tmux
     ./java
     ./aws
+    ./gcp
   ];
 
 }
