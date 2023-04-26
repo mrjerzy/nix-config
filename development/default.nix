@@ -29,6 +29,7 @@
     ./java
     ./aws
     ./gcp
+    ./js
   ];
 
 }
