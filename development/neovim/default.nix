@@ -49,6 +49,7 @@
         clever-f-vim
         editorconfig-nvim
         vim-terraform
+        gotests-vim
         {
           plugin = markdown-preview-nvim;
           config = ''
