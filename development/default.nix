@@ -27,6 +27,7 @@
     ./zsh
     ./tmux
     ./java
+    ./aws
   ];
 
 }
