@@ -37,8 +37,6 @@
             colorscheme dracula
           '';
         }
-        # papercolor-theme      # theme
-        # rainbow
         supertab
         rainbow
         vim-nix
