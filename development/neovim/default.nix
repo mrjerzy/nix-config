@@ -72,81 +72,6 @@
           '';
         }
         {
-          plugin = nvim-treesitter;
-          config = ''
-            lua <<EOF
-            require'nvim-treesitter.configs'.setup {
-              parser_install_dir = "$HOME/.local/share/nvim/site";
-              auto_install = true;
-
-              highlight = {
-                enable = true,
-                additional_vim_regex_highlighting = false,
-              };
-
-              ensure_installed = {
-                "bash",
-                "c",
-                "diff",
-                "dockerfile",
-                "dot",
-                "git_rebase",
-                "gitattributes",
-                "gitcommit",
-                "gitignore",
-                "go",
-                "gomod",
-                "gowork",
-                "haskell",
-                "html",
-                "http",
-                "java",
-                "json",
-                "jsonnet",
-                "lua",
-                "make",
-                "markdown",
-                "markdown_inline",
-                "mermaid",
-                "org",
-                "python",
-                "r",
-                "rst",
-                "rust",
-                "sql",
-                "terraform",
-                "toml",
-                "vim",
-                "yaml"
-              }
-            }
-            EOF
-          '';
-        }
-        nvim-treesitter-context
-        {
-          plugin = nvim-cmp;
-          config = ''
-          lua <<EOF
-          require'cmp'.setup {
-            }
-          EOF
-          '';
-        }
-        nvim-treesitter-context
-        {
-          plugin = nvim-treesitter;
-          config = ''
-          lua <<EOF
-            require'cmp'.setup {
-              sources = {
-                { name = 'treesitter' }
-              }
-            }
-          EOF
-          '';
-        }
-        {
           plugin = comment-nvim;
           config = ''
             lua require('Comment').setup()
@@ -166,7 +91,6 @@
             nnoremap <C-P> <cmd>Telescope find_files<cr>
             nnoremap <C-B> <cmd>Telescope buffers<cr>
             nnoremap <C-H> <cmd>Telescope help_tags<cr>
-            nnoremap <C-F> <cmd>Telescope treesitter<cr>
           '';
         }
         {
