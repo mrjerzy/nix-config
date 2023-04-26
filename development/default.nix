@@ -8,6 +8,7 @@
       pre-commit
       postman
       nodejs
+      terraform
     ];
   };
 
