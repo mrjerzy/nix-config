@@ -4,6 +4,7 @@
   config = {
     home.packages = with pkgs; [
       pkgs.awscli
+      pkgs.aws-nuke
     ];
 
     # PATH variables

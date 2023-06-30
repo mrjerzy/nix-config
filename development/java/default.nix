@@ -8,6 +8,7 @@
       pkgs.maven
       pkgs.jdk
       # pkgs.jdk11
+      pkgs.jbang
     ];
 
     # ENV variables

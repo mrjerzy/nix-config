@@ -32,6 +32,7 @@
    };
 
   programs.zsh.shellAliases = {
+    nix = "nix --extra-experimental-features nix-command --extra-experimental-features flakes";
     ls = "exa";
     la = "exa -la";
     l = "exa -l";
@@ -56,14 +57,28 @@
   programs.zsh.initExtra = ''
     # bookmarks
     c() { cd `bookmarks get $1` }
+
+    # fzf
+    source $HOME/.nix-profile/share/fzf/key-bindings.zsh
+  '';
+
+  programs.zsh.loginExtra = ''
+    bindkey "^R" fzf-history-widget
   '';
 
   # PATH variables
   home.sessionPath = [
+    # Jbang Binaries
+    "$HOME/.jbang/bin"
+    # Platformio
     "$HOME/.platformio/penv/bin"
     # required, as nix-profile disapears from PATH. Not sure
     # what causes it.
     "$HOME/.nix-profile/bin"
+    # Home Brew
+    "/opt/homebrew/bin"
+    # Docker Desktop
+    "/Applications/Docker.app/Contents/Resources/bin"
   ];
 
   home.packages = with pkgs; [
@@ -82,5 +97,6 @@
     nix
     tree
     ansible
+    fzf
   ];
 }

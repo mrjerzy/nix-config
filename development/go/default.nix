@@ -6,6 +6,7 @@
       pkgs.go
       pkgs.gocode
       pkgs.godef
+      pkgs.gotests
     ];
 
     # PATH variables

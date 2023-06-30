@@ -64,9 +64,6 @@
         gotests-vim
         {
           plugin = markdown-preview-nvim;
-          config = ''
-            let g:mkdp_auto_start = 1
-          '';
         }
         {
           plugin = pkgs.vimUtils.buildVimPlugin {
