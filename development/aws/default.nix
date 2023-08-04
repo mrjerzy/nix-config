@@ -5,6 +5,7 @@
     home.packages = with pkgs; [
       pkgs.awscli
       pkgs.aws-nuke
+      pkgs.localstack
     ];
 
     # PATH variables
