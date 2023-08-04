@@ -7,6 +7,8 @@
       cue
       act
       k6
+      lazydocker
+      lima
       
       vscode
       python38
