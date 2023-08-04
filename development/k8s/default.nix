@@ -12,6 +12,7 @@
       pkgs.kubernetes-helm
       pkgs.kubeseal
       pkgs.cilium-cli
+      pkgs.clusterctl
       unixtools.watch
     ];
 
