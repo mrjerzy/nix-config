@@ -47,8 +47,17 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 " Generate home-manager config
 nnoremap <leader>` :!home-manager switch --flake $NIX_MACHINE_CFG<cr>
-" Open Terminal
+" Open Tab
 nnoremap <leader>t :tabnew<cr>
+nnoremap <leader>1 :tabn 1<cr>
+nnoremap <leader>2 :tabn 2<cr>
+nnoremap <leader>3 :tabn 3<cr>
+nnoremap <leader>4 :tabn 4<cr>
+nnoremap <leader>5 :tabn 5<cr>
+nnoremap <leader>6 :tabn 6<cr>
+nnoremap <leader>7 :tabn 7<cr>
+nnoremap <leader>8 :tabn 8<cr>
+nnoremap <leader>9 :tabn 9<cr>
 " Tabs
 nnoremap <leader><leader> :tabnext<cr>
 nnoremap <leader>. :tabprevious<cr>
