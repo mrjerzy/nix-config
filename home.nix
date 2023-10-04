@@ -89,7 +89,7 @@
     wget
     yq
     nix-prefetch-git
-    exa
+    eza
     fzf
     iterm2
     du-dust
