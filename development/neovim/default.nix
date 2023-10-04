@@ -109,7 +109,7 @@
           '';
         }
         {
-          plugin = pkgs.vimUtils.buildVimPluginFrom2Nix {
+          plugin = pkgs.vimUtils.buildVimPlugin {
             pname = "nvim-scrollbar";
             version = "2022-02-26";
             src = pkgs.fetchFromGitHub {
