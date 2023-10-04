@@ -6,7 +6,6 @@
     # packages
     home.packages = with pkgs; [
       pkgs.rustup
-      pkgs.rust-analyzer
     ];
 
     # ENV variables
